@@ -1,6 +1,6 @@
 // TODO: Require the router and db items needed
 const router = require('express').Router();
-const store = require('../db/store')
+// const store = require('../db/store')
 const {
     readFromFile,
     readAndAppend,
@@ -28,12 +28,11 @@ router.post('/notes', (req, res) => {
       };
   
       readAndAppend(newNote, '../db/tips.json');
-      res.json(`Note added successfully');
+      res.json(`Note added successfully 🚀`);
     } else {
       res.error('Error in adding note');
     }
   });
-
 
 // TODO: Export the router
 
