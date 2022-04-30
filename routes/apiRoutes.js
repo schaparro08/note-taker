@@ -1,5 +1,6 @@
 // TODO: Require the router and db items needed
 const router = require('express').Router();
+const { addNotes } = require('../db/store');
 // const store = require('../db/store')
 const {
     readFromFile,
@@ -34,6 +35,10 @@ router.post('/notes', (req, res) => {
     }
   });
 
+  router.delete('/notes/:id', (req,res) => {
+    addNotes.filter(notes => notes.id !==req.params.id);
+    res.json(todos);
+  })
 // TODO: Export the router
 
 module.exports = router;
