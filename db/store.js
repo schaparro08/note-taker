@@ -3,8 +3,8 @@
 
 const util = require('util');
 const fs =  require('fs');
-
-const uuidv1 = require('uuid/v1');
+const fsUtils = require('../helpers/fsUtils');
+const uuidv1 = require('../helpers/uuid');
 
 //writeTofile
 const writeFile = util.promisify(fs.writeFile)
