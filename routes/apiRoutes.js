@@ -1,6 +1,6 @@
 // TODO: Require the router and db items needed
 const router = require('express').Router();
-// const store = require('../db/store')
+const store = require('../db/store')
 const {
     readFromFile,
     readAndAppend,
