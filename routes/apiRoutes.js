@@ -15,21 +15,20 @@ router.get('/notes', (req, res) => {
 
   
   // POST Route for a new UX/UI tip
-router.post('/', (req, res) => {
+router.post('/notes', (req, res) => {
     console.log(req.body);
   
-    const { title, text } = req.body;
+    const {title, text } = req.body;
   
     if (req.body) {
       const newNote = {
-        username,
         title,
         text,
         id: uuidv1(),
       };
   
       readAndAppend(newNote, '../db/tips.json');
-      res.json(`Note added successfully 🚀`);
+      res.json(`Note added successfully');
     } else {
       res.error('Error in adding note');
     }
