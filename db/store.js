@@ -3,8 +3,9 @@
 
 const util = require('util');
 const fs =  require('fs');
-const fsUtils = require('../helpers/fsUtils');
+// const fsUtils = require('../helpers/fsUtils');
 const uuidv1 = require('../helpers/uuid');
+
 
 //writeTofile
 const writeFile = util.promisify(fs.writeFile)

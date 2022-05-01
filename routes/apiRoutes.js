@@ -1,7 +1,8 @@
 // TODO: Require the router and db items needed
 const router = require('express').Router();
 const { addNotes } = require('../db/store');
-// const store = require('../db/store')
+const store = require('../db/store')
+// const data = require('../db/db.json')
 const {
     readFromFile,
     readAndAppend,
@@ -17,7 +18,7 @@ router.get('/notes', (req, res) => {
   
   // POST Route for a new UX/UI tip
 router.post('/notes', (req, res) => {
-    console.log(req.body);
+    console.log('hello');
   
     const {title, text } = req.body;
   
@@ -28,7 +29,7 @@ router.post('/notes', (req, res) => {
         id: uuidv1(),
       };
   
-      readAndAppend(newNote, '../db/tips.json');
+      readAndAppend(newNote);
       res.json(`Note added successfully 🚀`);
     } else {
       res.error('Error in adding note');
@@ -36,8 +37,8 @@ router.post('/notes', (req, res) => {
   });
 
   router.delete('/notes/:id', (req,res) => {
-    addNotes.filter(notes => notes.id !==req.params.id);
-    res.json(todos);
+    // readFromFile()
+    console.log(req.params);
   })
 // TODO: Export the router
 

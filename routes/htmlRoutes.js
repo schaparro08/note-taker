@@ -4,7 +4,7 @@ const router = require('express').Router();
 
 
 //TODO: Need to add the router .get functionality for each of the html pages
-router.get('notes', (req, res) => {
+router.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/notes.html'))
 })
 
