@@ -36,10 +36,10 @@ router.post('/notes', (req, res) => {
     }
   });
 
-  router.delete('/notes/:id', (req,res) => {
-    // readFromFile()
-    console.log(req.params);
-  })
+  // router.delete('/notes/:id', (req,res) => {
+  //   // readFromFile()
+  //   console.log(req.params);
+  // })
 // TODO: Export the router
 
 module.exports = router;
